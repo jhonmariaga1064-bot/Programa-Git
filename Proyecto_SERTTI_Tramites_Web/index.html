@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SERTTI Trámites - Módulo Web</title>
+</head>
+<body>
+  <h1>Gestión de Trámites - SERTTI Tránsito La Jagua</h1>
+
+  <h2>Registrar Trámite (POST)</h2>
+  <form action="tramites" method="post">
+    <label for="numeroRadicado">Número de radicado:</label>
+    <input type="text" id="numeroRadicado" name="numeroRadicado" required>
+    <br><br>
+
+    <label for="placaVehiculo">Placa del vehículo:</label>
+    <input type="text" id="placaVehiculo" name="placaVehiculo" required>
+    <br><br>
+
+    <label for="tipoTramite">Tipo de trámite:</label>
+    <select id="tipoTramite" name="tipoTramite">
+      <option value="Traspaso">Traspaso</option>
+      <option value="Traslado de cuenta">Traslado de cuenta</option>
+      <option value="Duplicado de placa">Duplicado de placa</option>
+      <option value="Duplicado de licencia">Duplicado de licencia</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Registrar trámite</button>
+  </form>
+
+  <hr>
+
+  <h2>Consultar Trámite por Radicado (GET)</h2>
+  <form action="tramites" method="get">
+    <label for="radicadoConsulta">Radicado a consultar:</label>
+    <input type="text" id="radicadoConsulta" name="radicado" required>
+    <button type="submit">Consultar</button>
+  </form>
+</body>
+</html>
